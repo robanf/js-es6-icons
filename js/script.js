@@ -96,3 +96,14 @@ const icons = [
       family: 'fas',
     },
   ];
+
+
+  icons.forEach((element)=> {
+    document.getElementById("icons").innerHTML +=`
+    <div class="col">
+     <div class="d-flex justify-content-center align-items-center flex-column p-5  bianco m-5 rounded">
+     <i class="${element.family} ${element.prefix}${element.name}"></i>
+       <div>${element.name}</div>
+     </div>
+    `
+});

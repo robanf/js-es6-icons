@@ -9,14 +9,19 @@
 
 h1{
     color: blue;
+    height: 40px;
 }
 
 .grigio{
     background-color: gray;
+    height: calc((100% - 120px));
 }
 
 
 .bianco{
     background-color: white;
+}
+
+.bianco i{
     font-size: 30px;
 }
