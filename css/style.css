@@ -10,3 +10,13 @@
 h1{
     color: blue;
 }
+
+.grigio{
+    background-color: gray;
+}
+
+
+.bianco{
+    background-color: white;
+    font-size: 30px;
+}
