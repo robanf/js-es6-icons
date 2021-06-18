@@ -1,0 +1,12 @@
+*{
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.blu{
+    background-color: blue;
+    height: 80px;
+}
+
+h1{
+    color: blue;
+}
