@@ -14,9 +14,10 @@ h1{
 
 .grigio{
     background-color: gray;
-    height: calc((100% - 120px));
 }
-
+header{
+    height: 120px;
+}
 
 .bianco{
     background-color: white;
@@ -24,4 +25,12 @@ h1{
 
 .bianco i{
     font-size: 30px;
+}
+
+.test{
+    height: 600px;
+}
+
+#icons{
+    height:100%;
 }
