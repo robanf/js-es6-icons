@@ -117,16 +117,46 @@ const iconscolor = icons.map((element) =>{
   }
 
   return {
-    name,
-    type,
-    family,
-    prefix,
+   ...element,
     color
   };
 });
 
+const type=[];
 
-  iconscolor.forEach((element)=> {
+iconscolor.forEach((element)=>{
+  if(!type.includes(element.type)){
+    type.push(element.type)
+    document.getElementById("type").innerHTML +=`
+    <option value="${element.type}">${element.type}</option>
+    `
+  }
+});
+
+const select=document.getElementById("type");
+
+select.addEventListener("change",function(){
+  const valoreselect=select.value;
+  console.log(valoreselect);
+  const filtericons= iconscolor.filter((element)=>{
+    return element.type == valoreselect;
+  });
+
+  stampa(filtericons);
+  if(valoreselect=="all"){
+    stampa(iconscolor);
+  }
+})
+
+console.log(type);
+
+
+  stampa(iconscolor)
+
+
+function stampa(array){
+  document.getElementById("icons").innerHTML="";
+  array.forEach((element)=> {
     document.getElementById("icons").innerHTML +=`
     <div class="col">
      <div class="d-flex justify-content-center align-items-center flex-column p-5  bianco m-5 rounded">
@@ -135,3 +165,4 @@ const iconscolor = icons.map((element) =>{
      </div>
     `
 });
+}
